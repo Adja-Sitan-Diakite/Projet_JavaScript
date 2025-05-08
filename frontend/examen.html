@@ -1,0 +1,63 @@
+<!-- frontend/examen.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Exam - Projet 2</title>
+  <link rel="stylesheet" href="css/examen.css">
+</head>
+<body>
+  <div class="container">
+    <!-- le Menu dans le site droit  -->
+    <nav class="sidebar" role="tablist" aria-orientation="vertical">
+      <button class="tab_btn active" data-target="create" role="tab" aria-selected="true">Create</button>
+      <button class="tab_btn" data-target="preview" role="tab" aria-selected="false">Preview</button>
+      <button id="btn_finish" class="tab_btn" data-target="finish" role="tab" aria-selected="false">Finish</button>
+    </nav>
+
+    <!-- Dynamic Content de droite -->
+    <main class="content">
+      
+      <!-- Create Section -->
+      <section id="create" class="tab_content active" role="tabpanel">
+        <h2>Creation</h2>
+        <div id="entete">
+          <label for="titre">Exam Title:</label>
+          <input type="text" id="titre" placeholder="Enter title">
+
+          <label for="description">Description:</label>
+          <textarea id="description" placeholder="Enter description"></textarea>
+
+          <label for="public">Target Audience:</label>
+          <input type="text" id="public" placeholder="ex: S4 MIP, Group A">
+        </div>
+        <div class="questions">
+          <h3>Questions</h3>
+          <button class="btn_add">+ Add Question</button>
+          <div id="questionsList"></div>
+        </div>
+      </section>
+
+      <!-- Preview Section -->
+      <section id="preview" class="tab_content" role="tabpanel" hidden>
+        <h2>Preview</h2>
+        <pre id="previewContent"></pre>
+      </section>
+
+      <!-- Finish Section -->
+      <section id="finish" class="tab_content" role="tabpanel" hidden>
+        <h2>Finish & Publish</h2>
+        <button id="publishBtn">Publish Exam</button>
+        <div id="bilan"></div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p>&copy; 2025 Projet 2. Simplifiez la création d'examens.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="js/examen.js"></script>
+</body>
+</html>
