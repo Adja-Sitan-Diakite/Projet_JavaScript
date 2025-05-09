@@ -31,7 +31,7 @@ setTimeout(() => {
       return false;
     }
     try {
-      const response = await fetch('http://localhost:4000/api/auth', {
+      const response = await fetch('http://localhost:3000/api/auth', {
         method: 'GET',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -69,7 +69,7 @@ setTimeout(() => {
 
   // Envoie la position au serveur
   function saveGeolocation(latitude, longitude) {
-    fetch('http://localhost:4000/api/auth/update-location', {
+    fetch('http://localhost:3000/api/auth/update-location', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ latitude, longitude })
@@ -90,7 +90,7 @@ setTimeout(() => {
   // Chargement des questions depuis l'API
   async function fetchQuestions() {
     try {
-      const response = await fetch(`http://localhost:4000/examens/${idExam}/questions`);
+      const response = await fetch(`http://localhost:3000/examens/${idExam}/questions`);
       if (!response.ok) throw new Error('Failed to fetch questions');
       const data = await response.json();
       return data.questions;

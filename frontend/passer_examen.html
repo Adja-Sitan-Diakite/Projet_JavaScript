@@ -3,25 +3,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online Exam - Projet 2</title>
+    <title>Examen en ligne - Projet 2</title>
     <link rel="stylesheet" href="./css/passer_examen.css">
 </head>
 <body>
     <nav>
         <ul class="nav-bar">
-            <li><a href="login.html">Acceuil</a></li>
-            <li><a id="Deconnexion" href="register.html">Deconnexion</a></li>
+            <li><a href="login.html">Accueil</a></li>
+            <li><a id="Deconnexion" href="register.html">Déconnexion</a></li>
         </ul>
     </nav>
-    <h1>Exam in progress...</h1>
+    <h1>PASSER UN EXAMEN</h1>
+    <div id="examInfo"></div>
+    <div id="questionContainer"></div>
     <div id="question_container" class="question-box">
-        <p>Please be aware, the evaluation will begin very soon.<br>GOOD LUCK!<br><strong>Projet 2 vous souhaite une excellente réussite.</strong></p>
-        <p id="question-text">Loading question...</p>
+        <p>Veuillez noter que l'évaluation commencera très bientôt.<br>BONNE CHANCE!<br><strong>Projet 2 vous souhaite une excellente réussite.</strong></p>
+        <p id="question-text">Chargement de la question...</p>
         <div id="media-container"></div>
         <div id="options-container"></div>
-        <input type="text" id="answer" placeholder="Your answer here..." style="display:none"/>
-        <p>Time remaining: <span id="timer" class="timer">0</span> seconds</p>
+        <input type="text" id="answer" placeholder="Votre réponse ici..." style="display:none"/>
+        <p>Temps restant: <span id="timer" class="timer">0</span> secondes</p>
     </div>
+    <div class="boutons-bas">
+        <button id="nextQuestion" class="petit-bouton">Question suivante</button>
+        <button id="submitExam" class="petit-bouton">Soumettre l'examen</button>
+    </div>
+    <div id="resultat"></div>
     <footer>
         <p>&copy; 2025 Projet 2. Réussissez vos examens avec nous.</p>
     </footer>

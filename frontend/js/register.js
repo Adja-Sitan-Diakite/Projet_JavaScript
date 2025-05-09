@@ -14,7 +14,7 @@ document.getElementById('signupForm').addEventListener('submit', (e)=> {
 
 
   // Envoi de la requête POST
-  axios.post('http://localhost:4000/users', {
+  axios.post('http://localhost:3000/users', {
     email:        email,
     password:     password,
     nom:          nom,
@@ -26,9 +26,9 @@ document.getElementById('signupForm').addEventListener('submit', (e)=> {
   })
     .then(response => {
     // Notification de succès et redirection
-    alert(`Projet 2: Compte créé avec succès !\nBienvenue ${nom} ${prenom}`);
+    alert(` Compte créé avec succès !\nBienvenue ${nom} ${prenom}`);
     e.target.reset();
-    window.location.href = './transition.html';
+    window.location.href = './selection.html';
   })
     .catch(error => {
       console.error('Projet 2: Erreur lors de la creation du compte:', error);

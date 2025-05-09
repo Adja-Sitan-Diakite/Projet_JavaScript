@@ -27,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     if (hasError) return;
 
     try {
-        const response = await fetch('http://localhost:4000/api/auth', {
+        const response = await fetch('http://localhost:3000/api/auth', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -58,8 +58,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         // Enregistrer l'email dans le sessionStorage
         sessionStorage.setItem('email', email);
 
-        // Rediriger vers la page transition.html
-        window.location.href = '/transition.html';
+        // Rediriger vers la page selection.html
+        window.location.href = '/selection.html';
 
         console.log('Projet 2: Connexion réussie pour l’utilisateur:', email);
     } catch (err) {

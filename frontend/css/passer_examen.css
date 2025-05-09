@@ -103,3 +103,41 @@ body {
     color: #555;
     font-size: 18px;
 }
+
+button {
+    width: auto;
+    min-width: 120px;
+    padding: 12px;
+    background-color: #007bff; /* Bleu */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.boutons-bas {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    background: transparent;
+    padding: 10px 0 0 0;
+    box-shadow: none;
+    position: static;
+}
+
+.petit-bouton {
+    width: 120px;
+    padding: 8px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 0;
+}
